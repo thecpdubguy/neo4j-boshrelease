@@ -1,0 +1,13 @@
+---
+java/openjdk-jdk-trusty-1.7.0_65.tar.gz:
+  object_id: e465807c-155e-44e1-a571-7b542a464c14
+  sha: 5cff5d0d765fe3a3727a2c7d65f533d61c9c65fc
+  size: 67169919
+neo4j/neo4j-community-2.1.7-unix.tar.gz:
+  object_id: 39d957e9-cead-40a5-b7ea-0c19efe2b6da
+  sha: 1827c318c019042c3ca2da89481f717f711d9aed
+  size: 41590806
+neo4j/neo4j-enterprise-2.1.7-unix.tar.gz:
+  object_id: 5435ff05-face-4870-aca7-6874591d1aca
+  sha: 21c28e8debecc9b3c0ccab0cf929c40329920193
+  size: 44019317

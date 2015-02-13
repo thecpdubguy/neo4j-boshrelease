@@ -1,0 +1,8 @@
+# abort script on any command that exit with a non zero value
+set -e
+
+VERSION=2.1.7
+
+tar xvf neo4j/neo4j-community-${VERSION}-unix.tar.gz
+
+cp -a neo4j-community-${VERSION}/. $BOSH_INSTALL_TARGET

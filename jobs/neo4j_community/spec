@@ -1,0 +1,15 @@
+---
+name: neo4j_community
+
+templates:
+   logging.properties.erb: config/logging.properties
+   neo4j_community_ctl.erb: bin/neo4j_community_ctl
+   neo4j-http-logging.xml.erb: config/neo4j-http-logging.xml
+   neo4j-server.properties.erb: config/neo4j-server.properties
+   neo4j.properties.erb: config/neo4j.properties
+
+packages:
+  - java
+  - neo4j_community
+
+properties: {}

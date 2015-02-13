@@ -1,0 +1,7 @@
+---
+name: neo4j_enterprise
+
+dependencies: []
+
+files:
+  - neo4j/neo4j-enterprise-*

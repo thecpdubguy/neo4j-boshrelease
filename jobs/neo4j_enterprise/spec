@@ -1,0 +1,23 @@
+---
+name: neo4j_enterprise
+
+templates:
+   logging.properties.erb: config/logging.properties
+   neo4j_enterprise_ctl.erb: bin/neo4j_enterprise_ctl
+   neo4j-http-logging.xml.erb: config/neo4j-http-logging.xml
+   neo4j-server.properties.erb: config/neo4j-server.properties
+   neo4j.properties.erb: config/neo4j.properties
+
+packages:
+  - java
+  - neo4j_enterprise
+
+properties:
+  neo4j.server.database_mode:
+    description: Whether to run as a single server or in HA mode. (SINGLE or HA)
+    default: HA
+  neo4j.server.index_offset:
+    description: Offset value to add to the spec.index when using multiple jobs
+    default: 0
+  neo4j.ha.initial_hosts:
+    description: Hosts where the cluster will be listening
