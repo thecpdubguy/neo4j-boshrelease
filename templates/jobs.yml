@@ -9,17 +9,14 @@ update:
   serial: false
 
 jobs:
-  - name: neo4j_z1
+  - name: neo4j
     templates:
-      - name: neo4j_community
-        release: neo4j-hybris
-    instances: 0
+    - name: neo4j_community
+      release: neo4j
+    instances: 1
+    persistent_disk: 0
     resource_pool: small_z1
     networks: (( merge ))
-    persistent_disk: 0
-    update:
-      canaries: 10
-    properties: {}
 
 networks: (( merge ))
 

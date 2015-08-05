@@ -12,12 +12,9 @@ update:
   update_watch_time: 1000-30000
 
 jobs:
-  - name: neo4j_z1
-    instances: 1
+  - name: neo4j
     networks:
-      - name: net1
-        static_ips: ~
-    properties: {}
+      - name: neo4j1
 
 compilation:
   cloud_properties:
@@ -29,7 +26,7 @@ resource_pools:
       name: random
 
 networks:
-- name: net1
+- name: neo4j1
   # Assumes up to 5 VMs, including 1 static and 4 dynamic.
   # Plus 5 (double the size) unused IPs, due to BOSH bug/quirk.
   subnets:

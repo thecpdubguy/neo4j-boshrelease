@@ -9,12 +9,10 @@ meta:
     version: latest
 
 jobs:
-  - name: neo4j_z1
-    instances: 2
+  - name: neo4j
     networks:
-      - name: net1
+      - name: neo4j1
     persistent_disk: (( meta.persistent_disk ))
-    properties: {}
 
 compilation:
   cloud_properties:
@@ -29,7 +27,7 @@ networks:
   - name: floating
     type: vip
     cloud_properties: {}
-  - name: net1
+  - name: neo4j1
     type: dynamic
     cloud_properties:
       security_groups: (( meta.security_groups ))

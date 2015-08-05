@@ -1,57 +1,57 @@
-# BOSH Release for neo4j
+BOSH release to run neo4j
+=======================
 
-This release support both neo4j Community and Enterprise editions
+Background
+----------
 
-#### Here is some deployment manifest examples:
+### What is neo4j?
 
-* neo4j community example:
-```yaml
-jobs:
-  - name: neo4j_z1
-    instances: 1
-    templates:
-      - name: neo4j_community
-        release: neo4j-hybris
-    resource_pool: rp_z1
-    [...]
+Neo4j is the world’s leading Graph Database. It is a high performance graph store with all the features expected of a mature and robust database, like a friendly query language and ACID transactions.
+
+Usage
+-----
+
+To use this bosh release, first upload it to your bosh:
+
+```
+bosh upload release https://github.com/hybris/neo4j-boshrelease
 ```
 
+For [bosh-lite](https://github.com/cloudfoundry/bosh-lite), you can quickly create a deployment manifest & deploy a cluster:
 
-* neo4j enterprise example:
+```
+templates/make_manifest warden
+bosh -n deploy
+```
+
+For AWS EC2, create a single VM:
+
+```
+templates/make_manifest aws-ec2
+bosh -n deploy
+```
+
+### Override security groups
+
+For AWS & Openstack, the default deployment assumes there is a `default` security group. If you wish to use a different security group(s) then you can pass in additional configuration when running `make_manifest` above.
+
+Create a file `my-networking.yml`:
+
 ```yaml
-jobs:
-  - name: neo4j_z1
-    instances: 2
-    templates:
-      - name: neo4j_enterprise
-        release: neo4j-hybris
-    resource_pool: rp_z1
-    properties:
-      neo4j:
-        server:
-          database_mode: HA # set the neo4j in high availability mode
-          index_offset: 0 # set the number of instances of previous jobs
-        ha:
-          initial_hosts:
-            - 10.10.244.10
-            - 10.10.244.11
-            - 10.10.244.12
-    [...]
-  - name: neo4j_z2
-    instances: 1
-    templates:
-      - name: neo4j_enterprise
-        release: neo4j-hybris
-    resource_pool: rp_z2
-    properties:
-      neo4j:
-        server:
-          database_mode: HA # set the neo4j in high availability mode
-          index_offset: 2 # set the number of instances of previous jobs
-        ha:
-          initial_hosts:
-            - 10.10.244.10
-            - 10.10.244.11
-            - 10.10.244.12
-    [...]
+---
+networks:
+  - name: neo4j1
+    type: dynamic
+    cloud_properties:
+      security_groups:
+        - neo4j
+```
+
+Where `- neo4j` means you wish to use an existing security group called `neo4j`.
+
+You now suffix this file path to the `make_manifest` command:
+
+```
+templates/make_manifest openstack-nova my-networking.yml
+bosh -n deploy
 ```
