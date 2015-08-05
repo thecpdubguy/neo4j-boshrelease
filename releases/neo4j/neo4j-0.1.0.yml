@@ -1,0 +1,52 @@
+---
+packages:
+- name: java
+  version: !binary |-
+    NjRmMDliM2VhYzUwZGNhOGM2ZjQ4ZjU3ZDg1ODMzZjFjMTVmM2Q3ZA==
+  fingerprint: !binary |-
+    NjRmMDliM2VhYzUwZGNhOGM2ZjQ4ZjU3ZDg1ODMzZjFjMTVmM2Q3ZA==
+  sha1: !binary |-
+    NWE0OThmM2YxNjdiMzJhYTM2ZmIzOWY1MWM0ZjZkOTA3MGU3OWRhOQ==
+  dependencies: []
+- name: neo4j_community
+  version: !binary |-
+    ZjRkZTk0NGU3OGYwOTIyYTc3MDcwYWRhNGFkMTA0YWNjYWIxYTBhZA==
+  fingerprint: !binary |-
+    ZjRkZTk0NGU3OGYwOTIyYTc3MDcwYWRhNGFkMTA0YWNjYWIxYTBhZA==
+  sha1: !binary |-
+    YWU4MDQyM2VlYzIzNzU3MzU5ZTk5MGY4Nzk0MDE0YzQ4NGZjZDNlNg==
+  dependencies: []
+- name: neo4j_enterprise
+  version: !binary |-
+    YTMxMTgzNGQ3MWRlODQzYTFhY2Q0Mzc0ZTVhYjM3NGFkMWE1ZWVlOQ==
+  fingerprint: !binary |-
+    YTMxMTgzNGQ3MWRlODQzYTFhY2Q0Mzc0ZTVhYjM3NGFkMWE1ZWVlOQ==
+  sha1: !binary |-
+    NzA2MzVjYmRhNmNmZTYxNGZkM2ZiZGFmOGJmZDUzODExYzg2MWRkMg==
+  dependencies: []
+jobs:
+- name: neo4j_community
+  version: !binary |-
+    YzE3ODVhMmZmNDljZTcxZGQyM2UyOTFmMWNlNmVhNWViYzlhZDNiNg==
+  fingerprint: !binary |-
+    YzE3ODVhMmZmNDljZTcxZGQyM2UyOTFmMWNlNmVhNWViYzlhZDNiNg==
+  sha1: !binary |-
+    YjEyNmY2MTIwYTExYTVhNzVkNDhhMjIwM2IxNDUzNjgyNGM3M2NmNg==
+- name: neo4j_enterprise
+  version: !binary |-
+    NTAxMzhjOTU5NzU0MDViYzA0YTgzMjI2Njg5ODIwZjc0YzllZDhlMg==
+  fingerprint: !binary |-
+    NTAxMzhjOTU5NzU0MDViYzA0YTgzMjI2Njg5ODIwZjc0YzllZDhlMg==
+  sha1: !binary |-
+    MjY4YTM5MzRjNzRiYjJhNmYzNDQ3NjM0NGYyYWE4NzJlZjNhZWU0MA==
+license:
+  version: !binary |-
+    NTY5YTQ4MTY2M2Y5NWIxMGNiODAzNTM5YmE2MWE4YzI0YTg4MTQ2Mw==
+  fingerprint: !binary |-
+    NTY5YTQ4MTY2M2Y5NWIxMGNiODAzNTM5YmE2MWE4YzI0YTg4MTQ2Mw==
+  sha1: !binary |-
+    OTFlYzFhNjIwMTc4ODBhZWYzMjk2ZWQxZDU2MjM1MTcxNDlhMWZmMg==
+commit_hash: b80b0c92
+uncommitted_changes: true
+name: neo4j
+version: 0.1.0
