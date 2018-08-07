@@ -11,5 +11,9 @@ templates:
 packages:
   - java
   - neo4j_community
+  
+provides:
+  - name: neo4j
+    type: conn
 
 properties: {}
