@@ -21,3 +21,7 @@ properties:
     default: 0
   neo4j.ha.initial_hosts:
     description: Hosts where the cluster will be listening
+
+provides:
+  - name: neo4j
+    type: conn
