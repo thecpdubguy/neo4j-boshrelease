@@ -17,6 +17,7 @@ pipelines:
           - mkdir -p ~/bosh-env/virtualbox
           - cd ~/bosh-env/virtualbox
           -  git clone https://github.com/cloudfoundry/bosh-deployment.git
+          - export BOSH_LOG_LEVEL=debug
           - ./bosh-deployment/virtualbox/create-env.sh
           - source .envrc
           - git submodule update --init --recursive --force
