@@ -5,7 +5,8 @@ pipelines:
     - step:
         script:
           - apt-get update -y
-          - apt-get install -y build-essential zlibc zlib1g-dev ruby ruby-dev openssl libxslt-dev libxml2-dev libssl-dev libreadline6-dev libyaml-dev libsqlite3-dev sqlite3 git
+          - apt-get install -y build-essential zlibc zlib1g-dev ruby ruby-dev openssl libxslt-dev libxml2-dev libssl-dev libreadline6-dev libyaml-dev libsqlite3-dev sqlite3
+          - apt-get install -y git curl
           - curl -Lo ./bosh https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-5.0.1-linux-amd64
           - chmod +x ./bosh
           - mv ./bosh /usr/local/bin/bosh
