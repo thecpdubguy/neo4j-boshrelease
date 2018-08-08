@@ -12,6 +12,7 @@ pipelines:
           - sudo apt-get update && sudo apt-get install git
           - mkdir -p ~/bosh-env/virtualbox
           - cd ~/bosh-env/virtualbox
+          -  git clone https://github.com/cloudfoundry/bosh-deployment.git
           - ./bosh-deployment/virtualbox/create-env.sh
           - source .envrc
           - git submodule update --init --recursive --force
