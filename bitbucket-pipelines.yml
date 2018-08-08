@@ -9,7 +9,7 @@ pipelines:
   default:
     - step:
         script:
-          - sudo apt-get update && sudo apt-get install git
+          - apt-get update && apt-get install git
           - mkdir -p ~/bosh-env/virtualbox
           - cd ~/bosh-env/virtualbox
           -  git clone https://github.com/cloudfoundry/bosh-deployment.git
