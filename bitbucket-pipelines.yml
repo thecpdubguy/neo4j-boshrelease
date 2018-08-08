@@ -9,7 +9,7 @@ pipelines:
   default:
     - step:
         script:
-          - apt-get update -y && apt-get install git -y
+          - apt-get update -y && apt-get install -y git curl
           - curl -Lo ./bosh https://s3.amazonaws.com/bosh-cli-artifacts/bosh-cli-5.0.1-linux-amd64
           - chmod +x ./bosh
           - mv ./bosh /usr/local/bin/bosh
