@@ -3,13 +3,17 @@
 # Only use spaces to indent your .yml configuration.
 # -----
 # You can specify a custom docker image from Docker Hub as your build environment.
-image: bosh/bosh-lite:latest
+image: ubuntu:10.08
 
 pipelines:
   default:
     - step:
         script:
           - sudo apt-get update && sudo apt-get install git
+          - mkdir -p ~/bosh-env/virtualbox
+          - cd ~/bosh-env/virtualbox
+          - ./bosh-deployment/virtualbox/create-env.sh
+          - source .envrc
           - git submodule update --init --recursive --force
           - bosh create release --name neo4j --force
           - bosh upload release
