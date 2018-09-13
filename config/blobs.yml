@@ -1,13 +1,12 @@
----
-java/openjdk-jre-trusty-1.7.0_65.tar.gz:
-  object_id: 37d6d5f1-c28d-499f-ad12-3639ad158b1d
-  sha: 65f4e665b0a736e861fedaa60560ba72ed19474c
-  size: 31606629
+java/openjdk-jdk-trusty-1.8.0_141.tar.gz:
+  size: 45927906
+  object_id: d8533fac-77f1-4f13-44e9-2be81f8dde78
+  sha: fef57709d2ca0b375a3879fe03df303afe24307f
 neo4j/neo4j-community-2.1.7-unix.tar.gz:
-  object_id: f78654b1-c79b-485d-8d91-37bc3cd24eea
-  sha: 1827c318c019042c3ca2da89481f717f711d9aed
-  size: 41590806
+  size: 4639
+  object_id: c067a38d-3032-4ad2-4aef-51202eef4b45
+  sha: 51e69cba745d2c5e140f0a4b4a8d75c0d0752b9b
 neo4j/neo4j-enterprise-2.1.7-unix.tar.gz:
-  object_id: 8c9a6f56-22cd-478d-ac66-947f8949dc4d
-  sha: 21c28e8debecc9b3c0ccab0cf929c40329920193
-  size: 44019317
+  size: 5839
+  object_id: 2c9234a6-3014-44c7-70b4-30de73319498
+  sha: 5f07f35ebc7bb67de49f92d51b6974f1526e8fb7

@@ -1,6 +1,6 @@
 ---
 final_name: neo4j
 blobstore:
-  provider: s3
+  provider: gcs
   options:
-    bucket_name: blobs-yaas-idefix/neo4j-boshrelease
+    bucket_name: neo4j-boshrelease
