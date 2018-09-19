@@ -55,22 +55,3 @@ You now suffix this file path to the `make_manifest` command:
 templates/make_manifest openstack-nova my-networking.yml
 bosh -n deploy
 ```
-
-
-## Manually creating the release (to a tarball)
-https://github.com/hybris/java-boshpackage
-
-To be able to manually build a release for this fork, we had to do the following:
-- Init and update the java submodule
-- Delete the blob for 1.7 `bosh remove-blob java/openjdk-jre-trusty-1.7.0_65.tar.gz`
-- Grab the tarball for 1.8 `wget https://download.run.pivotal.io/openjdk/trusty/x86_64/openjdk-1.8.0_141.tar.gz -O openjdk-jre-trusty-1.8.0_141.tar.gz`
-- Add the local 1.8 tarball as a blob `bosh add-blob temp/openjdk-jre-trusty-1.8.0_141.tar.gz java/openjdk-jre-trusty-1.8.0_141.tar.gz`
-- create the release `bosh create-release --tarball=../tileReleaseTarballs/neo4j-releaseNoJava7.tgz`
-
-
-
-
-
-
-
-
